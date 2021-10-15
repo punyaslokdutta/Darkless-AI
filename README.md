@@ -2,7 +2,6 @@
 
 This is a Tensorflow implementation of Learning to See in the Dark in CVPR 2018, by [Chen Chen](http://cchen156.github.io/), [Qifeng Chen](http://cqf.io/), [Jia Xu](http://pages.cs.wisc.edu/~jiaxu/), and [Vladlen Koltun](http://vladlen.info/).  
 
-[Project Website](http://cchen156.github.io/SID.html)<br/>
 [Paper](http://cchen156.github.io/paper/18CVPR_SID.pdf)<br/>
 
 ![teaser](images/fig1.png "Sample inpainting results on held-out images")
@@ -10,8 +9,6 @@ This is a Tensorflow implementation of Learning to See in the Dark in CVPR 2018,
 This code includes the default model for training and testing on the See-in-the-Dark (SID) dataset. 
 
 
-## Demo Video
-https://youtu.be/qWKUFK7MWvg
 
 ## Setup
 
@@ -22,7 +19,6 @@ Tested in Ubuntu + Intel i7 CPU + Nvidia Titan X (Pascal) with Cuda (>=8.0) and 
 
 ### Dataset
 
-**Update Aug, 2018:** We found some misalignment with the ground-truth for image 10034, 10045, 10172. Please remove those images for quantitative results, but they still can be used for qualitative evaluations.
 
 You can download it directly from Google drive for the [Sony](https://storage.googleapis.com/isl-datasets/SID/Sony.zip) (25 GB)  and [Fuji](https://storage.googleapis.com/isl-datasets/SID/Fuji.zip) (52 GB) sets. 
 
@@ -57,31 +53,11 @@ Loading the raw data and proccesing by Rawpy takes significant more time than th
 
 
 ## Citation
-If you use our code and dataset for research, please cite our paper:
+If you use dataset for research, please cite their paper:
 
 Chen Chen, Qifeng Chen, Jia Xu, and Vladlen Koltun, "Learning to See in the Dark", in CVPR, 2018.
 
 ### License
 MIT License.
 
-## FAQ
-1. Can I test my own data using the provided model? 
-
-The proposed method is designed for sensor raw data. The pretrained model probably not work for data from another camera sensor. We do not have support for other camera data. It also does not work for images after camera ISP, i.e., the JPG or PNG data.
-
-2. Will this be in any product?
-
-This is a research project and a prototype to prove a concept. 
-
-3. How can I train the model using my own raw data? 
-
-Generally, you just need to subtract the right black level and pack the data in the same way of Sony/Fuji data. If using rawpy, you need to read the black level instead of using 512 in the provided code. The data range may also differ if it is not 14 bits. You need to normalize it to [0,1] for the network input. 
-
-4. Why the results are all black?
-
-It is often because the pre-trained model not downloaded properly. After downloading, you should get 4 checkpoint related files for the model. 
-
-
-## Questions
-If you have additional questions after reading the FAQ, please email to cchen156@illinois.edu.
 
