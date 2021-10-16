@@ -1,6 +1,7 @@
 # Low light Enhancement on Tensorflow (Python)
 
-This is a Tensorflow implementation of Learning to See in the Dark in CVPR 2018, by [Chen Chen](http://cchen156.github.io/), [Qifeng Chen](http://cqf.io/), [Jia Xu](http://pages.cs.wisc.edu/~jiaxu/), and [Vladlen Koltun](http://vladlen.info/).  
+This is a Tensorflow implementation with minor tweaks/experiment  on  Peak Signal-to-Noise Ratio (PSNR) and
+Structural SIMilarity (SSIM) as opposed to the "Learning to See in the Dark in CVPR 2018" , by [Chen Chen](http://cchen156.github.io/), [Qifeng Chen](http://cqf.io/), [Jia Xu](http://pages.cs.wisc.edu/~jiaxu/), and [Vladlen Koltun](http://vladlen.info/)  
 
 [Paper](http://cchen156.github.io/paper/18CVPR_SID.pdf)<br/>
 
